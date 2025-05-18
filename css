@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('background.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 4rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.panel {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 4rem auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.twitch-button {
+    background-color: #9146FF;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .twitch-button:hover {
+    background-color: #772ce8;
+  }
+
+
+.panel h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+iframe {
+  width: 100%;
+  height: 700px;
+  border: none;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#searchInput {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+#searchInput::placeholder {
+  color: #ccc;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.card p {
+  margin: 0.3rem 0;
+  color: #ddd;
+}
