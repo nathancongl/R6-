@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>R6 Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    #searchInput {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 2rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+    .card h3 {
+      margin: 0 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero" data-aos="fade-down">
+    <h1>R6 Hub</h1>
+  </div>
+
+  <div class="panel" data-aos="fade-up">
+    <h2>R6 Tracker</h2>
+    <iframe src="https://r6.tracker.network/" loading="lazy"></iframe>
+  </div>
+
+  <div class="panel" data-aos="fade-up">
+    <h2>R6 Maps</h2>
+    <iframe src="https://www.r6maps.com/" loading="lazy"></iframe>
+  </div>
+
+  <div class="panel">
+    <h2>R6 Media</h2>
+    <iframe width="100%" height="500"
+      src="https://www.youtube.com/embed/-FKEPTibV8M"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="panel">
+    <h2 style="color:white; text-align:center;">Watch Rainbow Six Siege Streams on Twitch</h2>
+    <p style="color:white; text-align:center;">Click the button below to explore live Rainbow Six Siege content directly on Twitch.</p>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="https://www.twitch.tv/directory/category/tom-clancys-rainbow-six-siege" target="_blank" class="twitch-button">
+        Go to Category
+      </a>
+    </div>
+  </div>
+
+  <div class="panel" data-aos="fade-up">
+    <h2>Operator Search</h2>
+    <input type="text" id="searchInput" placeholder="Search operators, weapons, or strategies...">
+    <div id="results"></div>
+  </div>
+
+  <script>
+    const operatorData = [
+      {
+        name: "Ash",
+        role: "Attacker",
+        primaryWeapons: ["R4-C", "G36C"],
+        secondaryWeapons: ["M45 MEUSOC", "5.7 USG"],
+        strategy: "Fast entry, breaching soft walls quickly"
+      },
+      {
+        name: "Smoke",
+        role: "Defender",
+        primaryWeapons: ["FMG-9"],
+        secondaryWeapons: ["SMG-11"],
+        strategy: "Area denial with gas canisters"
+      }
+    ];
+
+    const input = document.getElementById('searchInput');
+    const results = document.getElementById('results');
+
+    input.addEventListener('input', () => {
+      const query = input.value.toLowerCase();
+      const filtered = operatorData.filter(op =>
+        op.name.toLowerCase().includes(query) ||
+        op.role.toLowerCase().includes(query) ||
+        op.primaryWeapons.some(w => w.toLowerCase().includes(query)) ||
+        op.secondaryWeapons.some(w => w.toLowerCase().includes(query)) ||
+        op.strategy.toLowerCase().includes(query)
+      );
+
+      results.innerHTML = filtered.map(op => `
+        <div class="card">
+          <h3>${op.name} (${op.role})</h3>
+          <p><strong>Primary:</strong> ${op.primaryWeapons.join(', ')}</p>
+          <p><strong>Secondary:</strong> ${op.secondaryWeapons.join(', ')}</p>
+          <p><strong>Strategy:</strong> ${op.strategy}</p>
+        </div>
+      `).join('');
+    });
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>
