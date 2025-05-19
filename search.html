@@ -66,7 +66,14 @@
             desc.textContent = mapInfo.description;
             resultEl.appendChild(desc);
 
-            for (const [siteName, siteData] of Object.entries(mapInfo.sites)) {
+            for (const [siteName, siteData] of Object.entries(mapInfo.sites))
+              if (siteName.toLowerCase().includes("2f kids")) {
+  const diagram = document.createElement('div');
+  diagram.className = 'site-diagram';
+  diagram.innerHTML = `<img src="oregon-2f-site.png" alt="Oregon 2F Site Diagram">`;
+  document.getElementById("siteDiagramContainer").appendChild(diagram);
+}
+{
               const site = document.createElement('div');
               site.className = 'section';
               site.innerHTML = `<h2>${siteName}</h2>`;
