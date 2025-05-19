@@ -42,7 +42,7 @@
           if (query === mapName.toLowerCase()) {
             resultEl.innerHTML = `<p>Select a site on ${mapName}:</p><ul>`;
             for (const siteName of Object.keys(mapInfo.sites)) {
-              const qParam = encodeURIComponent(mapName + ' ' + siteName.split(' ')[0]);
+              const qParam = encodeURIComponent(mapName + ' ' + siteName);
               resultEl.innerHTML += `<li><a href="search.html?q=${qParam}">${siteName}</a></li>`;
             }
             resultEl.innerHTML += '</ul>';
