@@ -6,6 +6,18 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+  <div class="search-container">
+  <input type="text" id="searchBar" list="searchOptions" placeholder="Search Operator/Map Here" />
+  <datalist id="searchOptions">
+    <option value="Ash">
+    <option value="Thermite">
+    <option value="Clubhouse">
+    <option value="Oregon">
+    <!-- Add more operator/map options here -->
+  </datalist>
+  <button onclick="handleSearch()">Go</button>
+</div>
+
 <body>
   <div class="hero" data-aos="fade-down">
     <h1>R6 Hub</h1>
