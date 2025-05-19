@@ -5,7 +5,7 @@
   <title>R6 Hub</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
+
   <div class="search-container">
   <input type="text" id="searchBar" list="searchOptions" placeholder="Search Operator/Map Here" />
   <datalist id="searchOptions">
@@ -17,6 +17,8 @@
   </datalist>
   <button onclick="handleSearch()">Go</button>
 </div>
+</head>
+  
 <script>
   function handleSearch() {
     const query = document.getElementById("searchBar").value.trim();
