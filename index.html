@@ -17,6 +17,14 @@
   </datalist>
   <button onclick="handleSearch()">Go</button>
 </div>
+<script>
+  function handleSearch() {
+    const query = document.getElementById("searchBar").value.trim();
+    if (query) {
+      window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+    }
+  }
+</script>
 
 <body>
   <div class="hero" data-aos="fade-down">
