@@ -66,13 +66,17 @@
             desc.textContent = mapInfo.description;
             resultEl.appendChild(desc);
 
-            for (const [siteName, siteData] of Object.entries(mapInfo.sites))
-              if (siteName.toLowerCase().includes("2f kids")) {
-  const diagram = document.createElement('div');
-  diagram.className = 'site-diagram';
-  diagram.innerHTML = `<img src="oregon-2f-blueprint.png" alt="Oregon 2F Site Diagram">`;
-  document.getElementById("siteDiagramContainer").appendChild(diagram);
+            for (const [siteName, siteData] of Object.entries(mapInfo.sites)) {
+  if (siteName.toLowerCase().includes("2f kids")) {
+    const diagram = document.createElement('div');
+    diagram.className = 'site-diagram';
+    diagram.innerHTML = `<img src="oregon-2f-blueprint.png" alt="Oregon 2F Site Diagram">`;
+    document.getElementById("siteDiagramContainer").appendChild(diagram);
+  }
+
+  // then all your existing attack/defense rendering code here...
 }
+
 {
               const site = document.createElement('div');
               site.className = 'section';
