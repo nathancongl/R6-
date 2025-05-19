@@ -286,3 +286,69 @@
     }
   }
 }
+ "Clubhouse": {
+    "description": "A biker gang hideout featuring three floors and long sightlines. Hard breaching and roam control are key.",
+    "sites": {
+      "Basement Church/Arsenal Room": {
+        "attack": {
+          "strategies": [
+            "Open Church wall from Moto Hatch or Dirt Tunnel for execute.",
+            "Take Blue control and pinch from Dirt Tunnel and Moto.",
+            "Clear roamers above to safely open Kitchen hatch."
+          ],
+          "operators": [
+            { "name": "Ace", "role": "Hard breacher", "task": "Open Church and Kitchen hatches." },
+            { "name": "Buck", "role": "Vertical play", "task": "Clear roamers above using Skeleton Key." },
+            { "name": "Iana", "role": "Intel + entry", "task": "Bait utility and support Blue take." },
+            { "name": "Thatcher", "role": "Support", "task": "Disable bandit/kaid on Church wall." },
+            { "name": "Zofia", "role": "Flex", "task": "Clear utility in Blue and push Dirt if needed." }
+          ]
+        },
+        "defense": {
+          "strategies": [
+            "Anchor one in Church and one in Arsenal with rotate.",
+            "Hold Blue aggressively with Wamai/Jäger and shield.",
+            "Play above to deny hatch control with C4."
+          ],
+          "operators": [
+            { "name": "Smoke", "role": "Anchor", "task": "Deny plant with gas and hold Arsenal." },
+            { "name": "Jäger", "role": "Projectile denial", "task": "Cover Blue and Moto shields." },
+            { "name": "Kaid", "role": "Hatch denial", "task": "Electroclaw Kitchen and Bar hatches." },
+            { "name": "Mute", "role": "Intel denial", "task": "Jam Dirt and Blue drone entry." },
+            { "name": "Wamai", "role": "Utility soak", "task": "Protect shield in Blue with magnets." }
+          ]
+        }
+      },
+      "1F Bar/Stage": {
+        "attack": {
+          "strategies": [
+            "Take vertical control from upstairs Gym/Bedroom.",
+            "Push Bar from Strip side while opening Stage wall.",
+            "Use Capitao or smokes to cover plant near the bar."
+          ],
+          "operators": [
+            { "name": "Thermite", "role": "Hard breacher", "task": "Open Stage or Stock wall." },
+            { "name": "Capitao", "role": "Plant support", "task": "Use smoke/fire to deny rotates." },
+            { "name": "Dokkaebi", "role": "Disruptor", "task": "Ring defenders and force peeks." },
+            { "name": "Sledge", "role": "Vertical control", "task": "Clear site from above with hammer." },
+            { "name": "Nomad", "role": "Flank watch", "task": "Hold Lounge and Kitchen flanks." }
+          ]
+        },
+        "defense": {
+          "strategies": [
+            "Anchor in Bar with deployable shield and rotate.",
+            "Play vertically in Cash to deny from above.",
+            "Roam in Lounge and Gym to waste time and deny control."
+          ],
+          "operators": [
+            { "name": "Castle", "role": "Delay", "task": "Castle Stock and Bar windows for time burn." },
+            { "name": "Aruni", "role": "Entry denial", "task": "Gates on Strip and Stage doors." },
+            { "name": "Lesion", "role": "Intel denial", "task": "Gu mines near Bar and Strip." },
+            { "name": "Mute", "role": "Jam entry points", "task": "Place jammers in Stage and Lounge." },
+            { "name": "Echo", "role": "Plant denial", "task": "Use drones to stop Stage plant." }
+          ]
+        }
+      }
+    }
+  }
+}
