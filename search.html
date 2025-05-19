@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Results</title>
+</head>
+<body>
+  <h1>Search Results</h1>
+  <p id="resultsText"></p>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q');
+    document.getElementById("resultsText").textContent = `You searched for: ${query}`;
+  </script>
+</body>
+</html>
