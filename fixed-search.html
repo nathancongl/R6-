@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      padding: 2rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .operator {
+      margin-left: 1rem;
+    }
+    .operator-name {
+      font-weight: bold;
+    }
+    a {
+      color: #66ccff;
+    }
+  </style>
+</head>
+<body>
+  <div id="resultsText">Loading...</div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get('q')?.toLowerCase();
+
+    fetch('maps.json')
+      .then(res => res.json())
+      .then(data => {
+        const resultEl = document.getElementById("resultsText");
+        resultEl.innerHTML = '';
+
+        for (const [mapName, mapInfo] of Object.entries(data)) {
+          if (query === mapName.toLowerCase()) {
+            resultEl.innerHTML = `<p>Select a site on ${mapName}:</p><ul>`;
+            for (const siteName of Object.keys(mapInfo.sites)) {
+              const qParam = encodeURIComponent(mapName + ' ' + siteName);
+              resultEl.innerHTML += `<li><a href="search.html?q=${qParam}">${siteName}</a></li>`;
+            }
+            resultEl.innerHTML += '</ul>';
+            return;
+          }
+
+          const [mapQuery, ...siteQueryParts] = query.split(' ');
+          const mapMatch = mapName.toLowerCase().includes(mapQuery);
+          const siteQuery = siteQueryParts.join(' ').trim();
+
+          if (mapMatch) {
+            const desc = document.createElement('p');
+            desc.textContent = mapInfo.description;
+            resultEl.appendChild(desc);
+
+            for (const [siteName, siteData] of Object.entries(mapInfo.sites)) {
+              const siteNameLower = siteName.toLowerCase();
+              if (!siteQuery || siteNameLower.includes(siteQuery)) {
+                const site = document.createElement('div');
+                site.className = 'section';
+                site.innerHTML = `<h2>${siteName}</h2>`;
+
+                ['attack', 'defense'].forEach(side => {
+                  const sideData = siteData[side];
+                  const stratHeader = document.createElement('h3');
+                  stratHeader.textContent = side.charAt(0).toUpperCase() + side.slice(1) + " Strategies:";
+                  site.appendChild(stratHeader);
+
+                  const stratList = document.createElement('ul');
+                  sideData.strategies.forEach(s => {
+                    const li = document.createElement('li');
+                    li.textContent = s;
+                    stratList.appendChild(li);
+                  });
+                  site.appendChild(stratList);
+
+                  const opHeader = document.createElement('h3');
+                  opHeader.textContent = side.charAt(0).toUpperCase() + side.slice(1) + " Operators:";
+                  site.appendChild(opHeader);
+
+                  sideData.operators.forEach(op => {
+                    const div = document.createElement('div');
+                    div.className = 'operator';
+                    div.innerHTML = `<span class="operator-name">${op.name}</span> (${op.role}): ${op.task}`;
+                    site.appendChild(div);
+                  });
+                });
+
+                resultEl.appendChild(site);
+              }
+            }
+
+            return;
+          }
+        }
+
+        resultEl.textContent = "No results found for: " + query;
+      });
+  </script>
+</body>
+</html>
