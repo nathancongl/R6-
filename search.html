@@ -49,7 +49,55 @@
             return;
           }
 
-          if (query && mapName.toLowerCase().includes(query)) {
+          const [mapQuery, ...siteQueryParts] = query.split(' ');
+const mapMatch = mapName.toLowerCase().includes(mapQuery);
+const siteQuery = siteQueryParts.join(' ').trim();
+
+if (mapMatch) {
+  const desc = document.createElement('p');
+  desc.textContent = mapInfo.description;
+  resultEl.appendChild(desc);
+
+  for (const [siteName, siteData] of Object.entries(mapInfo.sites)) {
+    const siteNameLower = siteName.toLowerCase();
+    if (!siteQuery || siteNameLower.includes(siteQuery)) {
+      // Display full site data
+      const site = document.createElement('div');
+      site.className = 'section';
+      site.innerHTML = `<h2>${siteName}</h2>`;
+
+      ['attack', 'defense'].forEach(side => {
+        const sideData = siteData[side];
+        const stratHeader = document.createElement('h3');
+        stratHeader.textContent = side.charAt(0).toUpperCase() + side.slice(1) + " Strategies:";
+        site.appendChild(stratHeader);
+
+        const stratList = document.createElement('ul');
+        sideData.strategies.forEach(s => {
+          const li = document.createElement('li');
+          li.textContent = s;
+          stratList.appendChild(li);
+        });
+        site.appendChild(stratList);
+
+        const opHeader = document.createElement('h3');
+        opHeader.textContent = side.charAt(0).toUpperCase() + side.slice(1) + " Operators:";
+        site.appendChild(opHeader);
+
+        sideData.operators.forEach(op => {
+          const div = document.createElement('div');
+          div.className = 'operator';
+          div.innerHTML = `<span class="operator-name">${op.name}</span> (${op.role}): ${op.task}`;
+          site.appendChild(div);
+        });
+      });
+
+      resultEl.appendChild(site);
+    }
+  }
+
+  return;
+}
             const desc = document.createElement('p');
             desc.textContent = mapInfo.description;
             resultEl.appendChild(desc);
