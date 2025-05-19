@@ -55,7 +55,7 @@
             resultEl.appendChild(desc);
 
             for (const [siteName, siteData] of Object.entries(mapInfo.sites)) {
-              if (query.includes(siteName.toLowerCase().split(' ')[0])) {
+              if (query.includes(siteName.toLowerCase()) || siteName.toLowerCase().includes(query)) {
                 const site = document.createElement('div');
                 site.className = 'section';
                 site.innerHTML = `<h2>${siteName}</h2>`;
