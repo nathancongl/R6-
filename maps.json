@@ -1,0 +1,288 @@
+{
+  "Oregon": {
+    "description": "A training facility with tight angles and vertical play.",
+    "sites": {
+      "2F Kids Dorms/Main Dorms": {
+        "attack": {
+          "strategies": [
+            "Take Master Balcony control and open Attic wall.",
+            "Pinch site from Big Window and Trophy.",
+            "Establish crossfire on Kids from Trophy and Big Window.",
+            "Hold flanks from White Stairs and Main Lobby."
+          ],
+          "operators": [
+            {
+              "name": "Ace",
+              "role": "Hard breacher",
+              "task": "Open Attic wall from Master."
+            },
+            {
+              "name": "Zofia",
+              "role": "Soft breacher",
+              "task": "Clear Trophy utility and pressure White Stairs."
+            },
+            {
+              "name": "Sledge",
+              "role": "Vertical play",
+              "task": "Disrupt roamers and support Trophy push."
+            },
+            {
+              "name": "Nomad",
+              "role": "Flank watch",
+              "task": "Place Airjabs on White and Lobby."
+            },
+            {
+              "name": "Iana",
+              "role": "Entry",
+              "task": "Use clone for intel and frag from Big Window."
+            }
+          ]
+        },
+        "defense": {
+          "strategies": [
+            "Anchor in Attic and Trophy with shields and ADS.",
+            "Rotate between Kids and Dorms with crossfires.",
+            "Deny Big Window and Master Balcony with utility."
+          ],
+          "operators": [
+            {
+              "name": "Smoke",
+              "role": "Anchor",
+              "task": "Deny plant with smokes from Trophy."
+            },
+            {
+              "name": "J\u00e4ger",
+              "role": "Projectile denial",
+              "task": "Protect shields and rotate spots."
+            },
+            {
+              "name": "Aruni",
+              "role": "Entry denial",
+              "task": "Gate Attic and Trophy doors."
+            },
+            {
+              "name": "Mute",
+              "role": "Intel denial",
+              "task": "Jam drones in key entry points."
+            },
+            {
+              "name": "Wamai",
+              "role": "Gadget denial",
+              "task": "Catch nades from Big Window and Trophy."
+            }
+          ]
+        }
+      },
+      "1F Kitchen/Dining": {
+        "attack": {
+          "strategies": [
+            "Push from Small Tower and breach Kitchen wall.",
+            "Take Dining control with vertical play from Meeting.",
+            "Clear roamers in Security and Showers first."
+          ],
+          "operators": [
+            {
+              "name": "Thermite",
+              "role": "Hard breacher",
+              "task": "Breach Kitchen wall from Small Tower."
+            },
+            {
+              "name": "Buck",
+              "role": "Vertical",
+              "task": "Use Skeleton Key from Meeting."
+            },
+            {
+              "name": "Twitch",
+              "role": "Utility clear",
+              "task": "Disable defender gadgets in Dining."
+            },
+            {
+              "name": "Nomad",
+              "role": "Flank watch",
+              "task": "Cover Security and Showers."
+            },
+            {
+              "name": "Flores",
+              "role": "Gadget denial",
+              "task": "Clear deployables in Kitchen and Dining."
+            }
+          ]
+        },
+        "defense": {
+          "strategies": [
+            "Hold Kitchen with shields and rotate to Dining.",
+            "Deny breach from Small Tower with impact tricking.",
+            "Play vertical denial from Dorms."
+          ],
+          "operators": [
+            {
+              "name": "Castle",
+              "role": "Site denial",
+              "task": "Block Dining and Kitchen line of sights."
+            },
+            {
+              "name": "Smoke",
+              "role": "Anchor",
+              "task": "Hold Kitchen with gas denial."
+            },
+            {
+              "name": "Pulse",
+              "role": "Vertical denial",
+              "task": "Play from below to C4 attackers."
+            },
+            {
+              "name": "Mute",
+              "role": "Drone denial",
+              "task": "Place jammers at choke points."
+            },
+            {
+              "name": "J\u00e4ger",
+              "role": "Projectile denial",
+              "task": "Protect Kitchen door and site shield."
+            }
+          ]
+        }
+      },
+      "1F Kitchen/Meeting": {
+        "attack": {
+          "strategies": [
+            "Push through Small Tower and breach Meeting wall.",
+            "Clear roamers in Kitchen and Security.",
+            "Plant behind benches in Meeting safely with smoke cover."
+          ],
+          "operators": [
+            {
+              "name": "Hibana",
+              "role": "Hard breacher",
+              "task": "Open Meeting wall from Small Tower."
+            },
+            {
+              "name": "Sledge",
+              "role": "Soft breacher",
+              "task": "Clear Kitchen and assist with vertical."
+            },
+            {
+              "name": "Capitao",
+              "role": "Plant support",
+              "task": "Use smoke/fire to deny rotates."
+            },
+            {
+              "name": "Dokkaebi",
+              "role": "Disruption",
+              "task": "Force movement with Logic Bombs."
+            },
+            {
+              "name": "Thatcher",
+              "role": "Support",
+              "task": "Clear wall denial for Hibana."
+            }
+          ]
+        },
+        "defense": {
+          "strategies": [
+            "Anchor in Meeting and Kitchen with rotation.",
+            "Deny plant with vertical C4 from Dorms.",
+            "Contest Small Tower entry with roamers."
+          ],
+          "operators": [
+            {
+              "name": "Maestro",
+              "role": "Intel",
+              "task": "Watch plant zones with Evil Eyes."
+            },
+            {
+              "name": "Mute",
+              "role": "Wall denial",
+              "task": "Jam Meeting walls and doors."
+            },
+            {
+              "name": "Bandit",
+              "role": "Hard breach denial",
+              "task": "Trick breach on Meeting wall."
+            },
+            {
+              "name": "Lesion",
+              "role": "Roamer",
+              "task": "Slow attackers from Small Tower."
+            },
+            {
+              "name": "Valkyrie",
+              "role": "Intel",
+              "task": "Throw cams around site and flanks."
+            }
+          ]
+        }
+      },
+      "Basement Laundry/Supply": {
+        "attack": {
+          "strategies": [
+            "Clear Freezer and Laundry Stairs for execute.",
+            "Open E-Box wall and push from Blue.",
+            "Drone out and eliminate roamers above."
+          ],
+          "operators": [
+            {
+              "name": "Ace",
+              "role": "Hard breacher",
+              "task": "Open E-Box wall."
+            },
+            {
+              "name": "Finka",
+              "role": "Team boost",
+              "task": "Support push with adrenal surges."
+            },
+            {
+              "name": "Nokk",
+              "role": "Stealth entry",
+              "task": "Flank from Freezer or Tower."
+            },
+            {
+              "name": "Iana",
+              "role": "Intel",
+              "task": "Clone clear Blue and Tower Stairs."
+            },
+            {
+              "name": "Lion",
+              "role": "Roam control",
+              "task": "Use EE-ONE-D to lock roamers in place."
+            }
+          ]
+        },
+        "defense": {
+          "strategies": [
+            "Hold Freezer and Blue with ADS and rotates.",
+            "Play shield in Pillar with utility dump.",
+            "Anchor Laundry and E-Box for plant denial."
+          ],
+          "operators": [
+            {
+              "name": "Smoke",
+              "role": "Anchor",
+              "task": "Deny Laundry push with gas."
+            },
+            {
+              "name": "Kaid",
+              "role": "Hatch denial",
+              "task": "Electroclaw Security and Meeting hatches."
+            },
+            {
+              "name": "Wamai",
+              "role": "Gadget denial",
+              "task": "Protect Pillar with magnets."
+            },
+            {
+              "name": "Aruni",
+              "role": "Entry denial",
+              "task": "Use gates at Blue and Laundry."
+            },
+            {
+              "name": "Echo",
+              "role": "Plant denial",
+              "task": "Use drones to stop plant from behind."
+            }
+          ]
+        }
+      }
+    }
+  }
+}
