@@ -8,10 +8,11 @@ body {
 }
 
 .hero {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 4rem;
-  text-align: center;
+  background-color: transparent; /* removes the dark background */
+  padding: 0.5rem 1rem;           /* less padding to shrink the space */
+  text-align: left;              /* align text to the left */
 }
+
 
 h1 {
   font-size: 4rem;
